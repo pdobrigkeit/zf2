@@ -166,10 +166,10 @@ class TranslatorTest extends TestCase
         $pl2  = $this->translator->translatePlural('Message 5', 'Message 5 Plural', 2);
         $pl10 = $this->translator->translatePlural('Message 5', 'Message 5 Plural', 10);
 
-        $this->assertEquals('Message 5 (en) Plural 0 or not 10', $pl0);
+        $this->assertEquals('Message 5 (en) Plural 0 or 10', $pl0);
         $this->assertEquals('Message 5 (en) Plural 1 or Singular', $pl1);
-        $this->assertEquals('Message 5 (en) Plural 0 or not 10', $pl2);
-        $this->assertEquals('Message 5 (en) Plural 10', $pl10);
+        $this->assertEquals('Message 5 (en) Plural 2', $pl2);
+        $this->assertEquals('Message 5 (en) Plural 0 or 10', $pl10);
     }
 
     public function testTranslatePluralsAndSingular()
